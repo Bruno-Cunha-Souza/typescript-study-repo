@@ -1,0 +1,12 @@
+services:
+   postgres:
+      image: postgres:17
+      container_name: bun-auth-postgres
+      restart: unless-stopped
+      environment:
+         POSTGRES_USER: docker
+         POSTGRES_PASSWORD: docker
+         POSTGRES_DB: auth
+      ports:
+         - '5432:5432'
+

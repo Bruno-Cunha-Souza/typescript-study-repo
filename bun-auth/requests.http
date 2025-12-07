@@ -1,0 +1,64 @@
+### Authentication API - Request Examples
+### Use VS Code REST Client extension to execute these requests
+
+@baseUrl = http://localhost:3000
+@email = test@example.com
+@password = Password123!
+@name = Test User
+
+### 1. Check if API is working
+GET {{baseUrl}}/
+
+###
+
+### 2. Create a new account
+POST {{baseUrl}}/api/auth/sign-up/email
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}",
+  "name": "{{name}}"
+}
+
+###
+
+### 3. Login
+# @name login
+POST {{baseUrl}}/api/auth/sign-in/email
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}"
+}
+
+###
+
+### 4. Check current session
+GET {{baseUrl}}/api/auth/session
+
+###
+
+### 5. Get authenticated user data (protected route)
+GET {{baseUrl}}/api/me
+
+###
+
+### 6. Get user profile (protected route)
+GET {{baseUrl}}/api/profile
+
+###
+
+### 7. Logout
+POST {{baseUrl}}/api/auth/sign-out
+
+###
+
+### 8. Public route example
+GET {{baseUrl}}/user/123
+
+###
+
+### 9. OpenAPI Documentation
+GET {{baseUrl}}/swagger
