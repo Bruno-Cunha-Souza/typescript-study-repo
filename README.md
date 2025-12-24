@@ -1,81 +1,59 @@
-# TypeScript Small Projects
+# TypeScript Study & Practice
 
-A collection of small projects and rapid prototypes in TypeScript, exploring different stacks and modern technologies.
+Repository for studying and practicing TypeScript, containing theoretical documentation, configuration examples, and hands-on projects.
 
-## 📚 Projects
+## Structure
 
-### 1. **Bun Auth** - Authentication API
+```txt
+typescript/
+├── docs/               # Theoretical study documentation
+│   ├── FUNCTION.md     # Functions in TypeScript
+│   ├── OOP.md          # Object-Oriented Programming
+│   └── TYPES.md        # Type system
+├── configs/            # Configuration file examples
+│   ├── biome.json      # Biome configuration (linter/formatter)
+│   └── tsconfig.json   # TypeScript configuration
+└── projects/           # Hands-on practice projects
+    └── bun-auth/       # Authentication API with Better-auth
+```
 
-Modern authentication built with the Bun ecosystem.
+## Documentation (docs/)
 
-**Stack:**
+Study notes on fundamental TypeScript concepts:
 
-- **Runtime**: [Bun](https://bun.sh)
-- **Framework**: [Elysia](https://elysiajs.com)
-- **ORM**: [Drizzle](https://orm.drizzle.team)
-- **Auth**: [Better-auth](https://better-auth.com)
-- **Database**: [PostgreSQL](https://www.postgresql.org/)
-- **Validation**: [Zod](https://zod.dev/)
+- **TYPES.md** - Array, Tuple, Enum, Union, Intersection, Literal Types, Type Aliases
+- **FUNCTION.md** - Declaration, Expression, Arrow Functions, Parameters, Overloading
+- **OOP.md** - Classes, Inheritance, Encapsulation, Polymorphism, Interfaces, Abstract Classes
 
-**Features:**
+## Projects (projects/)
 
-- ✅ Sign up with email
-- ✅ Sign in with email
-- ✅ Session management
-- ✅ Protected routes
-- ✅ OpenAPI documentation (Swagger)
+### Bun Auth
 
-For more details, see the [bun-auth README](./bun-auth/README.md)
+Modern authentication API built with the Bun ecosystem.
 
----
+**Stack:** Bun, Elysia, Drizzle ORM, Better-auth, PostgreSQL, Zod
 
-## 🚀 Quick Start
-
-Each project has its own setup instructions. Navigate to the desired project folder:
+**Features:** Email sign up/in, session management, protected routes, OpenAPI documentation
 
 ```bash
-cd bun-auth
+cd projects/bun-auth
 bun install
 docker-compose up -d
 bun run db:push
 bun run dev
 ```
 
-## 🛠️ General Prerequisites
+For more details, see the [bun-auth README](./projects/bun-auth/README.md)
 
-- [Bun](https://bun.sh) installed
+## Prerequisites
+
+- [Bun](https://bun.sh)
 - [Docker](https://www.docker.com/) and Docker Compose
 - Node.js (compatibility with some projects)
 
-## 📖 Structure
-
-```txt
-typescript/
-├── bun-auth/           # Authentication API with Better-auth
-├── README.md           # This file
-└── [future projects]
-```
-
-## 📝 Purpose
-
-This repository serves as a space to:
-
-- Explore new technologies and frameworks in TypeScript
-- Create rapid prototypes and POCs
-- Share patterns and best practices
-- Learn with practical examples
-
-## 📚 Useful Resources
+## Useful Resources
 
 - [TypeScript Docs](https://www.typescriptlang.org/)
 - [Better Auth Documentation](https://better-auth.com/docs)
 - [Elysia Guide](https://elysiajs.com/introduction.html)
 - [Drizzle ORM](https://orm.drizzle.team/docs/overview)
-
-## 📄 License
-
-Each project may have its own license. Check the LICENSE file in each folder.
-
----
-
-**Built with ❤️ in TypeScript**
